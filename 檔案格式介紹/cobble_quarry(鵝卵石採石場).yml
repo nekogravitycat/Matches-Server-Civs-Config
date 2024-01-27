@@ -18,7 +18,7 @@ build-reqs: # 蓋鵝卵石採石場需要用到的建材
   - LAVA # 岩漿源
   - WATER # 水源
 
-build-radius: 2 # 建築物範圍為 2*2*2
+build-radius: 2 # 建築物範圍半徑為 2，代表範圍為 5*5*5
 effects: # 建築物對非成員玩家的限制
   - block_break # 非成員玩家不能破壞方塊
   - block_build # 非成員玩家不能放置方塊

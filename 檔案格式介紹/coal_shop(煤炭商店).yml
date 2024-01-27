@@ -20,7 +20,7 @@ build-reqs: # 蓋煤炭商店需要用到的建材
   - COAL_BLOCK*1 # 煤炭磚*1
   - g:wool*25 # 羊毛*25（前面的 g 代表 group 群組，表示各種顏色的羊毛皆可）
 
-build-radius: 2 # 建築物範圍為 2*2*2
+build-radius: 2 # 建築物範圍半徑為 2，代表範圍為 5*5*5
 
 effects: # 建築物對非成員玩家的限制
   - block_break # 非成員玩家不能破壞方塊

@@ -6,7 +6,7 @@
 |--------------|----|
 | price        |價格|
 | build-reps   |建築需求|
-| build-radius |建築範圍|
+| build-radius |建築範圍半徑|
 | effects      |對非成員玩家的限制|
 | period       |作用週期|
 | upkeep       |作用|
