@@ -1,0 +1,37 @@
+# 此份文件為煤炭商店的配置檔案，說明煤炭商店的運作方法
+# 此份文件位於 item-types/shops/coal_shop.yml
+
+enabled: true
+type: region
+icon: CHEST
+shop-icon: COAL
+dynmap-marker: coins
+name: Coal_Shop
+max: 1 # 每位玩家只能建造一個煤炭商店
+price: 50 # 煤炭商店原價 $50，可能會隨著玩家經驗累積而降價
+groups:
+  - shop # 在書裡的分類為「商店」
+  - oreshop
+level:
+
+build-reqs: # 蓋煤炭商店需要用到的建材
+  - g:fence*7 # 柵欄*7（前面的 g 代表 group 群組，表示各種材質的柵欄皆可）
+  - CHEST*1 # 箱子*1
+  - COAL_BLOCK*1 # 煤炭磚*1
+  - g:wool*25 # 羊毛*25（前面的 g 代表 group 群組，表示各種顏色的羊毛皆可）
+
+build-radius: 2 # 建築物範圍為 2*2*2
+
+effects: # 建築物對非成員玩家的限制
+  - block_break # 非成員玩家不能破壞方塊
+  - block_build # 非成員玩家不能放置方塊
+  - chest_use # 非成員玩家不能使用箱子
+  - block_liquid # 液體不能被放置
+  - block_fire # 建築不能起火
+
+period: 3600 # 商店的作用週期，單位為秒（每 3600 秒執行下面的動作）
+upkeep: # 商店的作用
+  0:
+    input: # 需要放入箱子內，會消耗的資源
+      - COAL*8,CHARCOAL*24 # 煤炭*8 或是 木炭*24
+    payout: 8.33 # 產生 $8.33 到建造者的帳戶
